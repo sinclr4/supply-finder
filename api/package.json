@@ -1,0 +1,17 @@
+{
+  "name": "stoma-pack-finder-api",
+  "version": "1.0.0",
+  "description": "Azure Functions API for Stoma Pack Finder",
+  "main": "src/functions/*.js",
+  "engines": {
+    "node": ">=18.0.0 <21.0.0"
+  },
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^4.0.0",
+    "@azure/functions": "^4.5.0"
+  }
+}

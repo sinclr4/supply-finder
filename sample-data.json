@@ -1,0 +1,112 @@
+[
+  {
+    "id": "loc-001",
+    "name": "Royal London Hospital Pharmacy",
+    "address": "Whitechapel Road, London, E1 1BB",
+    "latitude": 51.5176,
+    "longitude": -0.0606,
+    "phone": "+44 20 7377 7000",
+    "hours": "Mon-Fri: 8am-8pm, Sat-Sun: 9am-5pm",
+    "type": "hospital",
+    "stockLevel": "high"
+  },
+  {
+    "id": "loc-002",
+    "name": "Boots Pharmacy - Manchester Piccadilly",
+    "address": "Piccadilly Gardens, Manchester, M1 1RG",
+    "latitude": 53.4808,
+    "longitude": -2.2370,
+    "phone": "+44 161 236 5321",
+    "hours": "Mon-Sat: 7am-10pm, Sun: 10am-6pm",
+    "type": "pharmacy",
+    "stockLevel": "medium"
+  },
+  {
+    "id": "loc-003",
+    "name": "Birmingham City Hospital",
+    "address": "Dudley Road, Birmingham, B18 7QH",
+    "latitude": 52.4923,
+    "longitude": -1.9350,
+    "phone": "+44 121 507 4747",
+    "hours": "24/7 Emergency",
+    "type": "hospital",
+    "stockLevel": "high"
+  },
+  {
+    "id": "loc-004",
+    "name": "Superdrug Pharmacy - Leeds",
+    "address": "Briggate, Leeds, LS1 6AJ",
+    "latitude": 53.7990,
+    "longitude": -1.5434,
+    "phone": "+44 113 245 6789",
+    "hours": "Mon-Sat: 8am-7pm, Sun: 10am-5pm",
+    "type": "pharmacy",
+    "stockLevel": "medium"
+  },
+  {
+    "id": "loc-005",
+    "name": "Edinburgh Royal Infirmary",
+    "address": "51 Little France Crescent, Edinburgh, EH16 4SA",
+    "latitude": 55.9211,
+    "longitude": -3.1369,
+    "phone": "+44 131 536 1000",
+    "hours": "24/7 Emergency",
+    "type": "hospital",
+    "stockLevel": "high"
+  },
+  {
+    "id": "loc-006",
+    "name": "Lloyds Pharmacy - Liverpool",
+    "address": "Church Street, Liverpool, L1 3AY",
+    "latitude": 53.4084,
+    "longitude": -2.9832,
+    "phone": "+44 151 709 1234",
+    "hours": "Mon-Fri: 9am-6pm, Sat: 9am-5pm",
+    "type": "pharmacy",
+    "stockLevel": "high"
+  },
+  {
+    "id": "loc-007",
+    "name": "Bristol Royal Infirmary",
+    "address": "Upper Maudlin Street, Bristol, BS2 8HW",
+    "latitude": 51.4631,
+    "longitude": -2.5970,
+    "phone": "+44 117 923 0000",
+    "hours": "24/7 Emergency",
+    "type": "hospital",
+    "stockLevel": "high"
+  },
+  {
+    "id": "loc-008",
+    "name": "Well Pharmacy - Glasgow",
+    "address": "Sauchiehall Street, Glasgow, G2 3AD",
+    "latitude": 55.8650,
+    "longitude": -4.2576,
+    "phone": "+44 141 332 5678",
+    "hours": "Mon-Sat: 8am-8pm, Sun: 10am-6pm",
+    "type": "pharmacy",
+    "stockLevel": "medium"
+  },
+  {
+    "id": "loc-009",
+    "name": "Newcastle Freeman Hospital",
+    "address": "Freeman Road, Newcastle upon Tyne, NE7 7DN",
+    "latitude": 55.0077,
+    "longitude": -1.5899,
+    "phone": "+44 191 233 6161",
+    "hours": "24/7 Emergency",
+    "type": "hospital",
+    "stockLevel": "high"
+  },
+  {
+    "id": "loc-010",
+    "name": "Rowlands Pharmacy - Cardiff",
+    "address": "Queen Street, Cardiff, CF10 2BX",
+    "latitude": 51.4816,
+    "longitude": -3.1736,
+    "phone": "+44 29 2034 5678",
+    "hours": "Mon-Sat: 8am-7pm, Sun: 11am-5pm",
+    "type": "pharmacy",
+    "stockLevel": "high"
+  }
+]

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test - Stoma Pack Finder</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #667eea; }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover { background: #5568d3; }
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .success { color: #28a745; }
+        .error { color: #dc3545; }
+        .info { color: #17a2b8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 API Connection Test</h1>
+        <p>This page tests the connection to your Azure Functions API.</p>
+        
+        <button onclick="testAPI()">Test API Connection</button>
+        <button onclick="testGeocoding()">Test Geocoding</button>
+        <button onclick="clearResults()">Clear</button>
+        
+        <div id="results"></div>
+    </div>
+
+    <script>
+        const resultsDiv = document.getElementById('results');
+        
+        function log(message, type = 'info') {
+            const p = document.createElement('p');
+            p.className = type;
+            p.textContent = message;
+            resultsDiv.appendChild(p);
+        }
+        
+        function logPre(data) {
+            const pre = document.createElement('pre');
+            pre.textContent = JSON.stringify(data, null, 2);
+            resultsDiv.appendChild(pre);
+        }
+        
+        function clearResults() {
+            resultsDiv.innerHTML = '';
+        }
+        
+        async function testAPI() {
+            clearResults();
+            log('Testing API connection...', 'info');
+            
+            try {
+                const apiUrl = 'http://localhost:7071/api/locations?lat=51.5074&lon=-0.1278&radius=50';
+                log('Requesting: ' + apiUrl, 'info');
+                
+                const response = await fetch(apiUrl);
+                
+                log('Response Status: ' + response.status, response.ok ? 'success' : 'error');
+                
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    log('Error Response:', 'error');
+                    logPre(errorText);
+                    return;
+                }
+                
+                const data = await response.json();
+                log('✅ Success! Found ' + data.count + ' locations', 'success');
+                logPre(data);
+                
+            } catch (error) {
+                log('❌ Error: ' + error.message, 'error');
+                log('Make sure Azure Functions is running: cd api && func start', 'info');
+            }
+        }
+        
+        async function testGeocoding() {
+            clearResults();
+            log('Testing Nominatim geocoding...', 'info');
+            
+            try {
+                const postcode = 'SW1A 1AA';
+                const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(postcode)}&countrycodes=gb&limit=1`;
+                
+                log('Searching for postcode: ' + postcode, 'info');
+                
+                const response = await fetch(url, {
+                    headers: { 'User-Agent': 'StomaPackFinder/1.0' }
+                });
+                
+                if (!response.ok) {
+                    log('❌ Geocoding failed: ' + response.status, 'error');
+                    return;
+                }
+                
+                const data = await response.json();
+                
+                if (data && data.length > 0) {
+                    log('✅ Success! Geocoded to: ' + data[0].lat + ', ' + data[0].lon, 'success');
+                    logPre(data[0]);
+                } else {
+                    log('❌ No results found for postcode', 'error');
+                }
+                
+            } catch (error) {
+                log('❌ Error: ' + error.message, 'error');
+            }
+        }
+    </script>
+</body>
+</html>

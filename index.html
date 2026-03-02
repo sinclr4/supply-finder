@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoma Pack Finder</title>
+    
+    <!-- Leaflet CSS - Local -->
+    <link rel="stylesheet" href="leaflet.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 Stoma Pack Finder</h1>
+            <p>Find stoma pack locations near you</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="postcodeInput" 
+                    placeholder="Enter your postcode (e.g., SW1A 1AA)"
+                    aria-label="Postcode input"
+                />
+                <button id="searchBtn" onclick="searchLocations()">
+                    <span id="searchBtnText">Search</span>
+                    <span id="searchSpinner" class="spinner" style="display: none;"></span>
+                </button>
+            </div>
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+            <div id="resultsInfo" class="results-info" style="display: none;"></div>
+        </div>
+
+        <div id="map"></div>
+
+        <div class="locations-list" id="locationsList" style="display: none;">
+            <h2>Nearby Locations</h2>
+            <div id="locationsContainer"></div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS - Local file to ensure it loads -->
+    <script src="leaflet.js"></script>
+    
+    <!-- Verify Leaflet loaded -->
+    <script>
+        if (typeof L === 'undefined') {
+            console.error('CRITICAL: Leaflet failed to load');
+            alert('Map library failed to load. Please refresh the page.');
+        } else {
+            console.log('✅ Leaflet loaded successfully, version:', L.version);
+        }
+    </script>
+    
+    <!-- Custom JS - Load after Leaflet -->
+    <script src="app.js"></script>
+</body>
+</html>
