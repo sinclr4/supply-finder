@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Stoma Pack Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .about-section h2 {
+            color: #7c3aed;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .about-section h3 {
+            color: #5b21b6;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .about-section p {
+            line-height: 1.8;
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);
+            border-left: 4px solid #7c3aed;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #7c3aed;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #5b21b6;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 Stoma Pack Finder</h1>
+            <p>About This Project</p>
+        </header>
+
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">🔍 Finder</a>
+            <a href="about.html" class="nav-link active">ℹ️ About</a>
+        </nav>
+
+        <div class="about-container">
+            <a href="index.html" class="back-link">Back to Finder</a>
+
+            <div class="about-section">
+                <h2>Andrew Parker's Mission</h2>
+                <p>
+                    Andrew Parker, a Bradford City supporter from West Allotment, North Tyneside, started an inspiring 
+                    grassroots initiative to help people with stomas access emergency supplies when they're out and about.
+                </p>
+                
+                <div class="highlight-box">
+                    <p><em>"I was probably more upset about the thought of having a stoma than being told I had cancer. 
+                    I thought it would change my life and make things impossible."</em></p>
+                </div>
+
+                <p>
+                    Following cancer surgery that required him to have a stoma, Andrew initially felt devastated. 
+                    However, he soon discovered that reality was very different from his fears. He now lives life to 
+                    the full - attending football matches, enjoying social outings, and continuing to do everything 
+                    he's always wanted to do.
+                </p>
+
+                <h3>The Emergency Kit Initiative</h3>
+                <p>
+                    Andrew's positive experience inspired him to help others facing similar situations. He began creating 
+                    and distributing emergency stoma kits, placing them in public venues across the country. Using items 
+                    that proved surplus to his requirements, each kit contains three smaller packs with:
+                </p>
+                <ul>
+                    <li>Sterile wipes</li>
+                    <li>A stoma pouch</li>
+                    <li>Disposal bags</li>
+                    <li>Barrier products</li>
+                </ul>
+                <p>
+                    These supplies are enough for "running repairs" if someone is caught without their own supplies - 
+                    a situation that can be stressful and embarrassing.
+                </p>
+
+                <h3>Where the Packs Are</h3>
+                <p>
+                    As an away supporter, Andrew has personally delivered emergency kits to football grounds including 
+                    Lincoln City, Leyton Orient, Milton Keynes, and AFC Wimbledon. He's also visited gyms, pubs, and 
+                    music venues across Tyneside, including The Glasshouse in Gateshead.
+                </p>
+                <p>
+                    Andrew hopes that in the future, major retailers will stock certified emergency packs nationwide, 
+                    saying: <em>"If that happens, there won't be a problem left for me to solve."</em>
+                </p>
+                <p>
+                    <small>Story source: <a href="https://www.bbc.co.uk/news/articles/cpqy82nzz9po" target="_blank" rel="noopener">BBC News</a>, February 2026</small>
+                </p>
+            </div>
+
+            <div class="about-section">
+                <h2>About This Finder</h2>
+                <p>
+                    I'm Rob Sinclair, and I was inspired by Andrew's amazing initiative to help the stoma community. 
+                    While Andrew has been doing incredible work placing these emergency packs in venues across the country, 
+                    I realized there was a challenge: how do people know where these life-saving supplies are when they need them?
+                </p>
+                <p>
+                    That's why I created the Stoma Pack Finder. This web application helps people quickly locate emergency 
+                    stoma supplies when they're out and about. Simply enter your postcode, and the finder shows you the 
+                    nearest locations where Andrew and others have placed emergency kits - whether that's a football ground, 
+                    gym, pub, or music venue.
+                </p>
+                <p>
+                    The application uses modern web technology to make finding these essential supplies as easy as possible:
+                </p>
+                <ul>
+                    <li>Real-time postcode search using OpenStreetMap</li>
+                    <li>Interactive map showing nearby locations</li>
+                    <li>Distance calculations to help you find the closest option</li>
+                    <li>Detailed information about each location including opening hours and contact details</li>
+                </ul>
+                <p>
+                    My hope is that this tool makes Andrew's generous initiative even more accessible, providing peace of 
+                    mind to people with stomas and their families when they're away from home. If you know of a venue that 
+                    stocks emergency stoma supplies, please get in touch so we can add it to our database.
+                </p>
+                <p>
+                    Together, we can help remove barriers and ensure that having a stoma doesn't prevent anyone from living 
+                    life to the full - just as Andrew has shown us all.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Stoma Pack Finder | <a href="index.html">Home</a> | <a href="about.html">About</a></p>
+        </footer>
+    </div>
+</body>
+</html>
